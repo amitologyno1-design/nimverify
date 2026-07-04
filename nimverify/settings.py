@@ -132,3 +132,10 @@ MIDDLEWARE.insert(
     1,
     "whitenoise.middleware.WhiteNoiseMiddleware"
 )
+STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "statics",
+]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
