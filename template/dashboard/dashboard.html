@@ -1,21 +1,107 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Dashboard</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NIMVerify Dashboard</title>
+
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-<h1>Welcome {{ request.user.username }}</h1>
+<div class="sidebar">
 
-<p><strong>Wallet Balance:</strong> ₦0.00</p>
+<h2>NIMVerify</h2>
 
-<hr>
+<a href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
 
-<p><a href="#">Verify NIN</a></p>
-<p><a href="#">Slip Reprint</a></p>
-<p><a href="#">Fund Wallet</a></p>
-<p><a href="#">Transaction History</a></p>
-<p><a href="/admin/">Admin Panel</a></p>
+<a href="#"><i class="fa-solid fa-id-card"></i> Verify NIN</a>
 
+<a href="#"><i class="fa-solid fa-file"></i> Slip Reprint</a>
+
+<a href="#"><i class="fa-solid fa-wallet"></i> Wallet</a>
+
+<a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Transactions</a>
+
+<a href="#"><i class="fa-solid fa-user"></i> Profile</a>
+
+<a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+
+</div>
+
+<div class="main">
+
+<div class="top">
+
+<h2>Welcome {{ request.user.username }}</h2>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Wallet Balance</h3>
+
+<h1>₦0.00</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Total Transactions</h3>
+
+<h1>0</h1>
+
+</div>
+
+<div class="card">
+
+<h3>NIN Verifications</h3>
+
+<h1>0</h1>
+
+</div>
+
+</div>
+
+<div class="actions">
+
+<a href="#" class="action">
+<i class="fa-solid fa-id-card"></i>
+Verify NIN
+</a>
+
+<a href="#" class="action">
+<i class="fa-solid fa-file"></i>
+Slip Reprint
+</a>
+
+<a href="#" class="action">
+<i class="fa-solid fa-wallet"></i>
+Fund Wallet
+</a>
+
+<a href="#" class="action">
+<i class="fa-solid fa-clock"></i>
+Transactions
+</a>
+
+</div>
+
+</div>
+
+<script src="{% static 'js/dashboard.js' %}"></script>
 </body>
+
 </html>
