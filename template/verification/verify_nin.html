@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>NIN Verification | NIMVerify</title>
+
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>NIN Verification</h1>
+
+<div class="card">
+
+<form method="POST">
+
+{% csrf_token %}
+
+<label>National Identification Number (NIN)</label>
+
+<input
+type="text"
+name="nin"
+placeholder="Enter 11-digit NIN"
+required>
+
+<br><br>
+
+<button class="action" type="submit">
+
+Verify NIN
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
